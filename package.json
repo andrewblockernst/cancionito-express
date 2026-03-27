@@ -16,7 +16,7 @@
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.37.3",
-    "sqlite3": "^5.1.7",
+    "sql.js": "^1.14.1",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

@@ -1,10 +1,11 @@
 import { Sequelize } from 'sequelize';
 import path from 'path';
 
-const dbPath = process.env.DB_PATH || path.join(__dirname, '../../Data/cancionito.db');
+// Use in-memory SQLite for Vercel, or file-based for local development
+const storage = process.env.NODE_ENV === 'production' ? ':memory:' : path.join(__dirname, '../../Data/cancionito.db');
 
 export const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: dbPath,
+  storage: storage,
   logging: false,
 });
